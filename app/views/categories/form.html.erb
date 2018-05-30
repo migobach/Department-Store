@@ -1,6 +1,6 @@
 <h1><%= @category.id ? 'Edit Department' : 'Create Department' %></h1>
 
-<% form_for @category do |f| %>
+<%= form_for @category do |f| %>
 
   <%= f.label :name %>
   <%= f.text_area :name, required: true, autofocus: true %>

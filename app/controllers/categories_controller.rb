@@ -11,11 +11,11 @@ class CategoriesController < ApplicationController
   
   def new
     @category = Category.new
-    render partial: "form"
+    render :form
   end
 
   def edit
-    render partial: "form"
+    render :form
   end
 
   def create
