@@ -1,0 +1,11 @@
+<h1>Deparment Store</h1>
+<p>Click on a deparment below to see inventory</p>
+
+
+<% @categories.each do |category| %>
+<ul>
+  <li>
+    <%= link to category.name, category %>
+  </li>
+</ul>
+<% end %>

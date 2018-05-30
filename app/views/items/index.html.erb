@@ -1,0 +1,8 @@
+<h1>Items</h1>
+<%= link_to 'Create a new item', new_category_item_path(@category) %>
+
+<ul>
+<% @items.each do |item| %>
+  <li><% link_to item.name, [@category, topic] %></li>
+<% end %>
+</ul>
