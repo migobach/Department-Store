@@ -1,7 +1,7 @@
 <h1><%= @category.name %></h1>
 <hr />
 <h3>What deparment would you like to do?</h3>
-<%= link_to 'Vew Inventory', items_path %>
+<%= link_to 'View Inventory', category_items_path%>
 <%= link_to 'Edit Department', edit_category_path %>
 <%= link_to 'Delete Department', @category, method: :delete %>
 

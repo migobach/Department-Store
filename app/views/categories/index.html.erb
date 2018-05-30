@@ -1,11 +1,10 @@
 <h1>Deparment Store</h1>
 <p>Click on a deparment below to see inventory</p>
 
-
 <% @categories.each do |category| %>
 <ul>
   <li>
-    <%= link to category.name, category %>
+    <%= link_to category.name, category_items_path(category.id) %>
   </li>
 </ul>
 <% end %>
