@@ -3,7 +3,11 @@
 <p><%= @item.description %></p>
 <h4>Price: $<%= @item.price %></h4>
 
+<% @rating.each do |rating| %>
+  <%= render 'ratings/rating', { rating: rating } %>
+<% end %>
 
+<hr />
 <%= link_to 'Edit Item', edit_category_item_path(@category, @item) %>
 <%= link_to 'Delete Item', category_item_path(@category, @item), method: :delete %>
-
+<%= link_to 'Add Comment', new_item_rating_path(@item) %>

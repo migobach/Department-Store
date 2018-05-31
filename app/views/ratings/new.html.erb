@@ -1,0 +1,11 @@
+<h1>Add a Reveiw</h1>
+<%= form_for [@item, @rating] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <%= f.label :author %>
+  <br />
+  <%= f.text_area :author, placeholder: 'Leave blank to remain anonymous' %>
+  <br />
+  <%= f.submit %>
+<% end %>

@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @rating = Rating.all
   end
 
   def new
