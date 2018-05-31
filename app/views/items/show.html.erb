@@ -3,7 +3,8 @@
 <p><%= @item.description %></p>
 <h4>Price: $<%= @item.price %></h4>
 
-<% @rating.each do |rating| %>
+<% binding.pry %>
+<% @item.ratings.each do |rating| %>
   <%= render 'ratings/rating', { rating: rating } %>
 <% end %>
 

@@ -7,7 +7,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @rating = Rating.all
+    # binding.pry
+    # @rating = Rating.all
   end
 
   def new
@@ -20,7 +21,7 @@ class ItemsController < ApplicationController
   end
 
   def create 
-    @item = @category.items.new(item_params)
+    @item = @category.items.create(item_params)
 
     if @item.save
       redirect_to [@category, @item]
